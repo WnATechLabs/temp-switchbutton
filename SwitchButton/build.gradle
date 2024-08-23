@@ -1,4 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'maven'
+group = 'com.github.WnATechLabs'
 
 buildscript {
     repositories {
@@ -21,3 +23,15 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 }
+ // afterEvaluate {
+ //        publishing {
+ //            publications {
+ //                create<MavenPublication>("maven") {
+ //                    from (components["release"])
+ //                    groupId = "com.github.WnATechLabs"
+ //                    artifactId = "witchbuttonp"
+ //                    version = "2.0.0"
+ //                }
+ //            }
+ //        }
+ //    }
