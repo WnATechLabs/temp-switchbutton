@@ -30,5 +30,3 @@ ext {
     POM_NAME = 'SwitchButton'
     POM_PACKAGING = 'aar'
 }
-
-apply from: rootProject.file('gradle/gradle-bintray-upload.gradle')
