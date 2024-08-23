@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 11
         targetSdkVersion 23
-        versionCode Integer.parseInt(VERSION_CODE)
-        versionName VERSION_NAME
+        versionCode 1
+        versionName '2.0.0'
     }
     buildTypes {
         release {
