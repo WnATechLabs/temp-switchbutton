@@ -7,6 +7,7 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
+        api 'com.github.jgritman:httpbuilder:http-builder-0.7.2'
         classpath 'com.android.tools.build:gradle:3.0.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         // classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.73'
