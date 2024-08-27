@@ -26,11 +26,6 @@ allprojects {
     }
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
 publishing {
     publications {
         maven(MavenPublication) {
