@@ -31,3 +31,19 @@ ext {
     POM_NAME = 'SwitchButton'
     POM_PACKAGING = 'aar'
 }
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            // Publish the release variant of the library
+            from components.release
+
+            groupId = 'com.github.WnATechLabs'
+            artifactId = 'SwitchButton'
+            version = '1.0.0'
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
