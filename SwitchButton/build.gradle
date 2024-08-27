@@ -6,6 +6,7 @@ buildscript {
     repositories {
         jcenter()
         google()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
     dependencies {
@@ -20,18 +21,20 @@ allprojects {
     repositories {
         jcenter()
         google()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }
- afterEvaluate {
-        publishing {
-            publications {
-                create<MavenPublication>("maven") {
-                    from (components["release"])
-                    groupId = "com.github.WnATechLabs"
-                    artifactId = "switchbutton"
-                    version = "2.0.0"
-                }
-            }
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
         }
     }
+}
