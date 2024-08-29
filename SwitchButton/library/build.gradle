@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 11
         targetSdkVersion 23
-        versionCode Integer.parseInt(VERSION_CODE)
-        versionName VERSION_NAME
+        versionCode 2
+        versionName '2.0.0'
     }
     buildTypes {
         release {
@@ -31,4 +31,4 @@ ext {
     POM_PACKAGING = 'aar'
 }
 
-apply from: rootProject.file('gradle/gradle-bintray-upload.gradle')
+// apply from: rootProject.file('gradle/gradle-bintray-upload.gradle')

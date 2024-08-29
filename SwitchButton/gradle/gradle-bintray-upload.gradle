@@ -1,5 +1,5 @@
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+// apply plugin: 'com.jfrog.bintray'
 
 version = VERSION_NAME
 group = GROUP
@@ -72,28 +72,28 @@ artifacts {
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty('bintray.user')
-    key = properties.getProperty('bintray.apikey')
-    configurations = ['archives']
-    pkg {
-        repo = 'maven'
-        name = POM_NAME
-        userOrg = 'kyleduo'
-        licenses = ['Apache-2.0']
-        websiteUrl = PRJ_URL
-        vcsUrl = GIT_URL
-        publicDownloadNumbers = true
-        override = true
-        publish = true
+// bintray {
+//     user = properties.getProperty('bintray.user')
+//     key = properties.getProperty('bintray.apikey')
+//     configurations = ['archives']
+//     pkg {
+//         repo = 'maven'
+//         name = POM_NAME
+//         userOrg = 'kyleduo'
+//         licenses = ['Apache-2.0']
+//         websiteUrl = PRJ_URL
+//         vcsUrl = GIT_URL
+//         publicDownloadNumbers = true
+//         override = true
+//         publish = true
+//
+//         version {
+//             name = VERSION_NAME
+//             desc = DESC
+//             released  = new Date()
+//             vcsTag = version
+//         }
+//     }
+// }
 
-        version {
-            name = VERSION_NAME
-            desc = DESC
-            released  = new Date()
-            vcsTag = version
-        }
-    }
-}
-
-bintrayUpload.dependsOn install
+// bintrayUpload.dependsOn install
